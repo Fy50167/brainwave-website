@@ -10,6 +10,7 @@ export default function Section({
 }) {
     return (
         <div
+            id={id}
             className={`relative ${
                 customPaddings ||
                 `py-10 lg:py-16 xl:py-20 ${
