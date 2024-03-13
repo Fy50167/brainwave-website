@@ -1,4 +1,5 @@
 import { brainwave } from '../assets';
+import { navigation } from '../constants';
 
 export default function Header() {
     return (
@@ -17,7 +18,18 @@ export default function Header() {
                 </a>
                 <nav className='hidden fixed top-50 right-0 bottom-0 bg-n-8 left-0 lg:static lg:flex lg:max-auto lg:bg-transparent'>
                     <div className='relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row'>
-                        1 2 3
+                        {navigation.map(
+                            (item) => (
+                                <a
+                                    key={item.id}
+                                    href={
+                                        item.url
+                                    }
+                                >
+                                    {item.title}
+                                </a>
+                            )
+                        )}
                     </div>
                 </nav>
             </div>
