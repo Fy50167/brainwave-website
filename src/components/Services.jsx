@@ -82,7 +82,33 @@ const Services = () => {
                                     The world's most powerful AI photo and video
                                     art generation engine. What will you create?
                                 </p>
-                                <ul></ul>
+                                <ul className='flex items-center justify-between'>
+                                    {brainwaveServicesIcons.map((item) => (
+                                        <li
+                                            key={index}
+                                            className={`flex items-center rounded-2xl justify-center ${
+                                                index === 2
+                                                    ? 'w-[3rem] h-[3rem] p-0.25 bg-conic-gradient rounded-2xl md:w-[4.5rem] md:h-4.5rem]'
+                                                    : 'flex w-10 h-10 bg-n-6 md:w-15 md:h-15'
+                                            }`}
+                                        >
+                                            <div
+                                                className={
+                                                    index === 2
+                                                        ? 'flex items-center justify-center h-full w-full bg-n-7 rounded-[1rem]'
+                                                        : ''
+                                                }
+                                            >
+                                                <img
+                                                    src={item}
+                                                    width={24}
+                                                    height={24}
+                                                    alt={item}
+                                                />
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         </div>
                     </div>
