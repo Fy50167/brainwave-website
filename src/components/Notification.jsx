@@ -17,7 +17,7 @@ export default function Notification({ className, title }) {
             />
             <div className='flex-1'>
                 <h6 className='bg-1 font-semibold text-base'>{title}</h6>
-                <div classname='flex items-center justify-between'>
+                <div className='flex items-center justify-between'>
                     <ul className='flex -m-0.5'>
                         {notificationImages.map((item, index) => (
                             <li
