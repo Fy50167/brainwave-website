@@ -1,4 +1,4 @@
-import { check, service1, service2 } from '../assets';
+import { check, service1, service2, service3 } from '../assets';
 import { brainwaveServices } from '../constants';
 import Generating from './Generating';
 import Heading from './Heading';
@@ -110,8 +110,20 @@ const Services = () => {
                                     ))}
                                 </ul>
                             </div>
+                            <div className='relative h-[20rem] bg-n-8 rounded-xl overflow-hidden md:h-[25rem]'>
+                                <img
+                                    src={service3}
+                                    className='w-full h-full object-cover'
+                                    width={520}
+                                    height={400}
+                                    alt='Scary robot'
+                                />
+                                <VideoChatMessage />
+                                <VideoBar />
+                            </div>
                         </div>
                     </div>
+                    <Gradient />
                 </div>
             </div>
         </Section>
