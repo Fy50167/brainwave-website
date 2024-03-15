@@ -12,6 +12,7 @@ export default function App() {
                 <Hero />
                 <Benefits />
                 <Collaboration />
+                <Services />
             </div>
 
             <ButtonGradient />
