@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from './Section';
-import { collabContent, collabText } from '../constants';
+import { collabApps, collabContent, collabText } from '../constants';
 import { brainwaveSymbol, check } from '../assets';
 import Button from './Button';
 
@@ -38,7 +38,7 @@ const Collaboration = () => {
                 </div>
 
                 <div className='lg:ml-auto xl:w-[38rem] mt-4'>
-                    <p classNme='body-2 mb-4 text-n-4 md:mb-16 lg:mb-32 lg: w-[22rem] lg:mx-auto'>
+                    <p className='body-2 mb-4 text-n-4 md:mb-16 lg:mb-32 lg: w-[22rem] lg:mx-auto'>
                         {collabText}
                     </p>
                     <div className='relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100'>
@@ -54,6 +54,30 @@ const Collaboration = () => {
                                 </div>
                             </div>
                         </div>
+                        <ul>
+                            {collabApps.map((app, index) => (
+                                <li
+                                    key={app.id}
+                                    className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${
+                                        index * 45
+                                    }`}
+                                >
+                                    <div
+                                        className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
+                                            index * 45
+                                        }`}
+                                    >
+                                        <img
+                                            className='m-auto'
+                                            width={app.width}
+                                            height={app.height}
+                                            alt={app.title}
+                                            src={app.icon}
+                                        />
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </div>
