@@ -74,6 +74,8 @@ const Services = () => {
                             </div>
                             <PhotoChatMessage />
                         </div>
+
+                        <div className='p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]'></div>
                     </div>
                 </div>
             </div>
