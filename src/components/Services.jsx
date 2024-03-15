@@ -75,7 +75,16 @@ const Services = () => {
                             <PhotoChatMessage />
                         </div>
 
-                        <div className='p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]'></div>
+                        <div className='p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]'>
+                            <div className='py-12 px-4 xl:px-8'>
+                                <h4 className='h4 mb-4'>Video generation</h4>
+                                <p className='body-2 mb-[2rem] text-n-3'>
+                                    The world's most powerful AI photo and video
+                                    art generation engine. What will you create?
+                                </p>
+                                <ul></ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
