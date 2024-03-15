@@ -3,6 +3,7 @@ import Section from './Section';
 import { collabApps, collabContent, collabText } from '../constants';
 import { brainwaveSymbol, check } from '../assets';
 import Button from './Button';
+import { LeftCurve, RightCurve } from './design/Collaboration';
 
 const Collaboration = () => {
     return (
@@ -12,7 +13,7 @@ const Collaboration = () => {
                     <h2 className='h2 mb-4 md:mb-8'>
                         AI Chat App for seamless collaboration
                     </h2>
-                    <ul className='max-w-[22rem] mb-10 md:mb-14'>
+                    <ul className='max-w-[22rem] mb-8 md:mb-12'>
                         {collabContent.map((item) => (
                             <li key={item.id} className='mb-3 py-3'>
                                 <div className='flex items-center'>
@@ -38,7 +39,7 @@ const Collaboration = () => {
                 </div>
 
                 <div className='lg:ml-auto xl:w-[38rem] mt-4'>
-                    <p className='body-2 mb-4 text-n-4 md:mb-16 lg:mb-32 lg: w-[22rem] lg:mx-auto'>
+                    <p className='body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg: w-[22rem] lg:mx-auto'>
                         {collabText}
                     </p>
                     <div className='relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100'>
@@ -78,6 +79,9 @@ const Collaboration = () => {
                                 </li>
                             ))}
                         </ul>
+
+                        <LeftCurve />
+                        <RightCurve />
                     </div>
                 </div>
             </div>
