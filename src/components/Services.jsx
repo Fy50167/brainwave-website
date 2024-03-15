@@ -1,5 +1,5 @@
 import { check, service1, service2, service3 } from '../assets';
-import { brainwaveServices } from '../constants';
+import { brainwaveServices, brainwaveServicesIcons } from '../constants';
 import Generating from './Generating';
 import Heading from './Heading';
 import Section from './Section';
@@ -55,7 +55,7 @@ const Services = () => {
                     </div>
 
                     <div className='relative z-1 grid gap-5 lg:grid-cols-2'>
-                        <div className='relative min-h-[39rem] border border-n-1/10 rounded-3xl oberflow-hidden'>
+                        <div className='relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden'>
                             <div className='absolute inset-0'>
                                 <img
                                     src={service2}
@@ -83,31 +83,33 @@ const Services = () => {
                                     art generation engine. What will you create?
                                 </p>
                                 <ul className='flex items-center justify-between'>
-                                    {brainwaveServicesIcons.map((item) => (
-                                        <li
-                                            key={index}
-                                            className={`flex items-center rounded-2xl justify-center ${
-                                                index === 2
-                                                    ? 'w-[3rem] h-[3rem] p-0.25 bg-conic-gradient rounded-2xl md:w-[4.5rem] md:h-4.5rem]'
-                                                    : 'flex w-10 h-10 bg-n-6 md:w-15 md:h-15'
-                                            }`}
-                                        >
-                                            <div
-                                                className={
+                                    {brainwaveServicesIcons.map(
+                                        (item, index) => (
+                                            <li
+                                                key={index}
+                                                className={`flex items-center rounded-2xl justify-center ${
                                                     index === 2
-                                                        ? 'flex items-center justify-center h-full w-full bg-n-7 rounded-[1rem]'
-                                                        : ''
-                                                }
+                                                        ? 'w-[3rem] h-[3rem] p-0.25 bg-conic-gradient md:w-[4.5rem] md:h-[4.5rem]'
+                                                        : 'flex w-10 h-10 bg-n-6 md:w-15 md:h-15'
+                                                }`}
                                             >
-                                                <img
-                                                    src={item}
-                                                    width={24}
-                                                    height={24}
-                                                    alt={item}
-                                                />
-                                            </div>
-                                        </li>
-                                    ))}
+                                                <div
+                                                    className={
+                                                        index === 2
+                                                            ? 'flex items-center justify-center h-full w-full bg-n-7 rounded-[1rem]'
+                                                            : ''
+                                                    }
+                                                >
+                                                    <img
+                                                        src={item}
+                                                        width={24}
+                                                        height={24}
+                                                        alt={item}
+                                                    />
+                                                </div>
+                                            </li>
+                                        )
+                                    )}
                                 </ul>
                             </div>
                             <div className='relative h-[20rem] bg-n-8 rounded-xl overflow-hidden md:h-[25rem]'>
