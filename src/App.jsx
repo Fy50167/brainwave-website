@@ -16,6 +16,7 @@ export default function App() {
                 <Collaboration />
                 <Services />
                 <Pricing />
+                <Roadmap />
             </div>
 
             <ButtonGradient />
