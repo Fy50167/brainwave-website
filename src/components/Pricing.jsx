@@ -3,6 +3,7 @@ import Section from './Section';
 import { smallSphere, stars } from '../assets';
 import PricingList from './PricingList';
 import { LeftLine, RightLine } from './design/Pricing';
+import Heading from './Heading';
 
 const Pricing = () => {
     return (

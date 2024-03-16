@@ -1,4 +1,5 @@
 import React from 'react';
+import Tagline from './Tagline';
 
 const Heading = ({ className, title, text, tag }) => {
     return (

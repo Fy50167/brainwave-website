@@ -5,7 +5,7 @@ import { check } from '../assets';
 
 const PricingList = () => {
     return (
-        <div className='flex gap-[1rem] mg-lg:flex-wrap'>
+        <div className='flex gap-[1rem] max-lg:flex-wrap'>
             {pricing.map((item) => (
                 <div
                     key={item.id}
@@ -46,7 +46,7 @@ const PricingList = () => {
                                     height={24}
                                     alt='check'
                                 />
-                                <p clasName='body-2 ml-4'>{feature}</p>
+                                <p className='body-2 ml-4'>{feature}</p>
                             </li>
                         ))}
                     </ul>
