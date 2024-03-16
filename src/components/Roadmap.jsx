@@ -2,6 +2,7 @@ import React from 'react';
 import Section from './Section';
 import Heading from './Heading';
 import { roadmap } from '../constants';
+import { check2, grid, loading1 } from '../assets';
 
 const Roadmap = () => {
     return (
@@ -15,7 +16,40 @@ const Roadmap = () => {
                     {roadmap.map((item) => {
                         const status =
                             item.status === 'done' ? 'Done' : 'In-progress';
-                        return <div></div>;
+                        return (
+                            <div key={item.id}>
+                                <div>
+                                    <div>
+                                        <img
+                                            src={grid}
+                                            className='w-full'
+                                            width={550}
+                                            height={550}
+                                            alt='Grid'
+                                        />
+                                    </div>
+
+                                    <div className='relative z-1'>
+                                        <div className='flex justify-between items-center'>
+                                            <Tagline>{item.date}</Tagline>
+                                            <div>
+                                                <img
+                                                    src={
+                                                        item.status === 'done'
+                                                            ? check2
+                                                            : loading1
+                                                    }
+                                                    className='mr-2.5'
+                                                    width={16}
+                                                    height={16}
+                                                    alt={status}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        );
                     })}
                 </div>
             </div>
